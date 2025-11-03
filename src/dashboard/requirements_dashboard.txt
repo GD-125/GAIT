@@ -1,0 +1,22 @@
+# Dashboard Requirements
+# Install with: pip install -r requirements_dashboard.txt
+
+# Core framework
+streamlit>=1.28.0
+
+# Visualization
+plotly>=5.17.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning
+torch>=2.0.0
+scikit-learn>=1.3.0
+
+# Existing project dependencies (if not already installed)
+scipy>=1.11.0
+
+# Optional but recommended
+watchdog>=3.0.0  # For auto-reloading during development

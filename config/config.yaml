@@ -1,0 +1,84 @@
+# configs/config.yaml
+# Configuration file for Gait Detection System
+
+# ==================== PREPROCESSING ====================
+preprocessing:
+  sampling_rate: 100.0              # Sampling frequency in Hz
+  window_size: 128                  # Number of samples per window (1.28 seconds at 100Hz)
+  overlap: 0.5                      # Window overlap (0.5 = 50% overlap)
+  normalization_method: 'zscore'    # Options: 'zscore', 'minmax', 'robust'
+  filter_type: 'sensor_specific'    # Options: 'sensor_specific', 'bandpass', 'lowpass'
+  balance_method: 'undersample'     # Options: 'undersample', 'oversample', 'none'
+  outlier_threshold: 3.0            # IQR/Z-score threshold for outliers
+  missing_value_method: 'interpolate' # Options: 'interpolate', 'forward_fill', 'mean', 'median'
+
+# ==================== MODEL ARCHITECTURE ====================
+model:
+  input_features: 38                # Number of sensor features
+  seq_length: 128                   # Sequence length (must match window_size)
+  
+  # CNN Configuration
+  conv_filters: [64, 128, 256]      # Number of filters for each Conv1D layer
+  kernel_sizes: [5, 5, 5]           # Kernel size for each Conv1D layer
+  
+  # LSTM Configuration
+  lstm_hidden_size: 128             # Hidden units in each LSTM layer
+  lstm_num_layers: 2                # Number of BiLSTM layers
+  
+  # Fully Connected Layers
+  fc_hidden_sizes: [256, 128]       # Hidden sizes for FC layers
+  
+  # Regularization
+  dropout: 0.3                      # Dropout rate (0.0 to 1.0)
+  use_batch_norm: true              # Use batch normalization
+  use_residual: true                # Use residual connections in CNN
+
+# ==================== TRAINING ====================
+training:
+  num_epochs: 50                    # Maximum number of training epochs
+  batch_size: 32                    # Batch size for training
+  learning_rate: 0.001              # Initial learning rate
+  weight_decay: 0.00001             # L2 regularization (1e-5)
+  
+  # Optimizer
+  optimizer: 'adam'                 # Options: 'adam', 'adamw', 'sgd'
+  
+  # Learning Rate Scheduler
+  scheduler: 'reduce_on_plateau'    # Options: 'reduce_on_plateau', 'cosine', 'step', 'none'
+  scheduler_patience: 5             # Epochs to wait before reducing LR
+  scheduler_factor: 0.5             # Factor to reduce LR by
+  
+  # Early Stopping
+  early_stopping_patience: 15       # Epochs to wait before stopping
+  
+  # Training Settings
+  gradient_clip_max_norm: 1.0       # Max gradient norm for clipping
+  use_class_weights: false          # Use class weights for imbalanced data
+  train_val_split: 0.2              # Validation split ratio
+  random_seed: 42                   # Random seed for reproducibility
+
+# ==================== PATHS ====================
+paths:
+  data_raw_dir: 'data/raw'
+  data_processed_dir: 'data/processed'
+  data_splits_dir: 'data/splits'
+  checkpoint_dir: 'checkpoints'
+  results_dir: 'results'
+  logs_dir: 'results/logs'
+  plots_dir: 'results/plots'
+  shap_dir: 'results/shap_outputs'
+
+# ==================== EXPLAINABILITY ====================
+explainability:
+  max_background_samples: 100       # Background samples for SHAP
+  num_test_samples: 20              # Test samples to explain
+  top_k_features: 20                # Top K features to display
+  generate_force_plots: true        # Generate individual force plots
+  num_force_plot_samples: 3         # Number of force plots to generate
+
+# ==================== NOTES ====================
+# - Adjust window_size and overlap based on your activity duration
+# - Increase batch_size if you have more GPU memory
+# - Reduce learning_rate if training is unstable
+# - Increase early_stopping_patience for longer training
+# - Set use_class_weights to true if you have severe class imbalance

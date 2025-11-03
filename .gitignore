@@ -1,0 +1,152 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model Checkpoints & Training Results
+checkpoints/
+checkpoints_no_overfit/
+results/logs/*.json
+results/disease_classifier/
+results/hybrid_disease_classifier/
+results/alzheimer/
+*.pt
+*.pth
+*.h5
+*.pkl
+*.pickle
+*.ckpt
+*.weights
+models/saved_models/
+wandb/
+tensorboard/
+mlruns/
+!checkpoints/.gitkeep
+!results/.gitkeep
+
+# Data & Datasets
+data/raw/*.csv
+data/raw/*.xlsx
+data/processed/
+data/cache/
+data/synthetic/
+data/disease_data/
+datasets/
+disease_classification/data/
+*.csv
+*.xlsx
+*.xls
+*.npy
+*.npz
+!data/sample/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/cache/.gitkeep
+MS_PA_data_MENDELEY_MASKED.xlsx
+
+# Images & Visualizations (keep important plots)
+image/
+images/
+# Uncomment to ignore all plots
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.bmp
+
+# Documentation & Reports (project-specific)
+Report/
+Repor/
+docs/
+*.docx
+*.doc
+*.pdf
+research-paper-format.docx
+ONLY_GAIT_ABSTRACT.docx
+
+# Temporary & Misc Files
+file/
+nul
+*.log
+*.tmp
+*.bak
+*.zip
+daphnet+freezing+of+gait.zip
+
+# Jupyter Notebooks (checkpoints)
+.ipynb_checkpoints/
+
+# System Files
+Thumbs.db
+.DS_Store
+
+# Configuration (if sensitive)
+.env
+.env.local
+*.local.json
+.claude/settings.local.json
+
+# Analysis & Text Files (optional - uncomment if needed)
+# *.txt
+# *.md
+
+# Federated Learning
+federated_models/
+client_data/
+
+# Explainability outputs
+shap_outputs/
+lime_outputs/
+explainability_cache/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+tests/__pycache__/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Kubernetes secrets
+deployment/kubernetes/secrets.yaml
+
+# Dashboard cache
+dashboard_cache/
+.streamlit/

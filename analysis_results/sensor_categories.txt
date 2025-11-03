@@ -1,0 +1,72 @@
+SENSOR CATEGORIZATION
+==================================================
+
+ACCELEROMETER SENSORS:
+
+  Right Foot (3 axes):
+    - accelerometer_right_foot_x
+    - accelerometer_right_foot_y
+    - accelerometer_right_foot_z
+
+  Right Shin (3 axes):
+    - accelerometer_right_shin_x
+    - accelerometer_right_shin_y
+    - accelerometer_right_shin_z
+
+  Right Thigh (3 axes):
+    - accelerometer_right_thigh_x
+    - accelerometer_right_thigh_y
+    - accelerometer_right_thigh_z
+
+  Left Foot (3 axes):
+    - accelerometer_left_foot_x
+    - accelerometer_left_foot_y
+    - accelerometer_left_foot_z
+
+  Left Shin (3 axes):
+    - accelerometer_left_shin_x
+    - accelerometer_left_shin_y
+    - accelerometer_left_shin_z
+
+  Left Thigh (3 axes):
+    - accelerometer_left_thigh_x
+    - accelerometer_left_thigh_y
+    - accelerometer_left_thigh_z
+
+
+GYROSCOPE SENSORS:
+
+  Right Foot (3 axes):
+    - gyroscope_right_foot_x
+    - gyroscope_right_foot_y
+    - gyroscope_right_foot_z
+
+  Right Shin (3 axes):
+    - gyroscope_right_shin_x
+    - gyroscope_right_shin_y
+    - gyroscope_right_shin_z
+
+  Right Thigh (3 axes):
+    - gyroscope_right_thigh_x
+    - gyroscope_right_thigh_y
+    - gyroscope_right_thigh_z
+
+  Left Foot (3 axes):
+    - gyroscope_left_foot_x
+    - gyroscope_left_foot_y
+    - gyroscope_left_foot_z
+
+  Left Shin (3 axes):
+    - gyroscope_left_shin_x
+    - gyroscope_left_shin_y
+    - gyroscope_left_shin_z
+
+  Left Thigh (3 axes):
+    - gyroscope_left_thigh_x
+    - gyroscope_left_thigh_y
+    - gyroscope_left_thigh_z
+
+
+EMG SENSORS:
+  - EMG_right
+  - EMG_left

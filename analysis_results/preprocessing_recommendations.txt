@@ -1,0 +1,85 @@
+PREPROCESSING RECOMMENDATIONS
+==================================================
+
+
+NORMALIZATION:
+  • accelerometer_right_foot_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_foot_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_foot_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_right_foot_x: Very large range (-13292 to 24037) - Strongly recommend Z-score normalization
+  • gyroscope_right_foot_y: Very large range (-9280 to 15610) - Strongly recommend Z-score normalization
+  • gyroscope_right_foot_z: Very large range (-9988 to 23123) - Strongly recommend Z-score normalization
+  • accelerometer_right_shin_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_shin_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_shin_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_right_shin_x: Very large range (-15389 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_right_shin_y: Very large range (-10960 to 21646) - Strongly recommend Z-score normalization
+  • gyroscope_right_shin_z: Very large range (-11572 to 9550) - Strongly recommend Z-score normalization
+  • accelerometer_right_thigh_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_thigh_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_right_thigh_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_right_thigh_x: Very large range (-10972 to 11326) - Strongly recommend Z-score normalization
+  • gyroscope_right_thigh_y: Very large range (-11223 to 11707) - Strongly recommend Z-score normalization
+  • gyroscope_right_thigh_z: Very large range (-7401 to 6220) - Strongly recommend Z-score normalization
+  • accelerometer_left_foot_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_foot_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_foot_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_left_foot_x: Very large range (-18362 to 9219) - Strongly recommend Z-score normalization
+  • gyroscope_left_foot_y: Very large range (-10805 to 14002) - Strongly recommend Z-score normalization
+  • gyroscope_left_foot_z: Very large range (-19975 to 9491) - Strongly recommend Z-score normalization
+  • accelerometer_left_shin_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_shin_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_shin_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_left_shin_x: Very large range (-32768 to 20538) - Strongly recommend Z-score normalization
+  • gyroscope_left_shin_y: Very large range (-11134 to 21334) - Strongly recommend Z-score normalization
+  • gyroscope_left_shin_z: Very large range (-5637 to 6512) - Strongly recommend Z-score normalization
+  • accelerometer_left_thigh_x: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_thigh_y: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • accelerometer_left_thigh_z: Very large range (-32768 to 32767) - Strongly recommend Z-score normalization
+  • gyroscope_left_thigh_x: Very large range (-17283 to 10340) - Strongly recommend Z-score normalization
+  • gyroscope_left_thigh_y: Very large range (-18684 to 12213) - Strongly recommend Z-score normalization
+  • gyroscope_left_thigh_z: Very large range (-6126 to 6681) - Strongly recommend Z-score normalization
+  • EMG_right: Large range - Apply Z-score normalization
+  • EMG_left: Large range - Apply Z-score normalization
+
+FILTERING:
+  • accelerometer_right_foot_y: High variance - Consider noise filtering
+  • gyroscope_right_foot_x: Very high variance (CV=15.63) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_foot_y: Very high variance (CV=570.94) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_foot_z: Very high variance (CV=24.51) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_right_shin_y: Very high variance (CV=3.11) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_shin_x: Very high variance (CV=421.70) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_shin_y: Very high variance (CV=43.64) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_shin_z: Very high variance (CV=8.12) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_right_thigh_y: Very high variance (CV=6.66) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_right_thigh_z: Very high variance (CV=6.76) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_thigh_x: Very high variance (CV=78.54) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_thigh_y: Very high variance (CV=84.14) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_right_thigh_z: Very high variance (CV=15.94) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_foot_x: Very high variance (CV=9.63) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_foot_y: Very high variance (CV=285.31) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_foot_z: Very high variance (CV=116.07) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_left_shin_y: Very high variance (CV=10.66) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_shin_x: Very high variance (CV=56.71) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_shin_y: Very high variance (CV=83.18) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_shin_z: Very high variance (CV=6.45) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_left_thigh_y: Very high variance (CV=31.87) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • accelerometer_left_thigh_z: Very high variance (CV=15.52) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_thigh_x: Very high variance (CV=69.55) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_thigh_y: Very high variance (CV=40.78) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+  • gyroscope_left_thigh_z: Very high variance (CV=5.73) - Apply low-pass Butterworth filter (3-5 Hz cutoff)
+
+FEATURE_ENGINEERING:
+  • Accelerometer (6 locations): Compute magnitude = sqrt(x²+y²+z²) for each location
+  • Accelerometer: Extract jerk (derivative of acceleration) to detect sudden movements
+  • Accelerometer: Apply FFT to extract frequency-domain features (dominant frequency, spectral energy)
+  • Gyroscope (6 locations): Compute angular velocity magnitude
+  • Gyroscope: Calculate rate of change for rotation detection
+  • EMG (2 sensors): Compute RMS (Root Mean Square) for muscle activation
+  • EMG: Extract envelope using moving average or Hilbert transform
+
+MODEL_TRAINING:
+  • Class imbalance detected (ratio 17.3:1) - Use weighted loss or SMOTE oversampling
+  • Use sliding window segmentation (suggested: 128-256 samples per window with 50% overlap)
+  • CNN-BiLSTM architecture: Conv1D(64) -> Conv1D(128) -> BiLSTM(64) -> Dense(1)
+  • Train-Val-Test split: 70-15-15 or 60-20-20 for robust evaluation

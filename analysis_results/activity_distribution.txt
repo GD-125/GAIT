@@ -1,0 +1,37 @@
+ACTIVITY DISTRIBUTION
+==================================================
+
+Total samples: 127783
+
+walking:
+  Count: 52060
+  Percentage: 40.74%
+
+going_down:
+  Count: 17188
+  Percentage: 13.45%
+
+standing:
+  Count: 16981
+  Percentage: 13.29%
+
+going_up:
+  Count: 15781
+  Percentage: 12.35%
+
+sitting:
+  Count: 9904
+  Percentage: 7.75%
+
+running:
+  Count: 9175
+  Percentage: 7.18%
+
+standing_up:
+  Count: 3690
+  Percentage: 2.89%
+
+sitting_down:
+  Count: 3004
+  Percentage: 2.35%
+
